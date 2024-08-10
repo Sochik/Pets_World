@@ -30,6 +30,7 @@ import bird_1 from "./bird_1.jpg"
 import bird_2 from "./bird_2.jpg" 
 import bird_3 from "./bird_3.jpg"
 import bird_4 from "./bird_4.jpg";
+import formBackground from "./formBackground.jpg"
 
 
 export {
@@ -62,5 +63,6 @@ dog_3,
     dog_2,
   bird_2,
   bird_3,
-  bird_4,
+    bird_4,
+  formBackground
 };

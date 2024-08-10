@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer";
 import { Toaster } from "react-hot-toast";
 import Gallery from "./Pages/Gallery";
+import Contact from "./Pages/Contact";
 
 export default function App() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   const PageLayout = () => {
     return (
       <>
         <Header />
         <Outlet />
-        <Footer />
+        <Footer
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
       </>
     );
   };
@@ -24,11 +30,20 @@ export default function App() {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: (
+            <Home
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+            />
+          ),
         },
         {
           path: "/Gallery",
           element: <Gallery />,
+        },
+        {
+          path: "/Contact",
+          element: <Contact />,
         },
       ],
     },

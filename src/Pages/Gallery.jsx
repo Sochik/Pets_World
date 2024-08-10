@@ -18,7 +18,7 @@ export default function Gallery() {
   return (
     <main>
       <section className="container mx-auto relative flex items-center">
-        <div className="flex flex-col gap-6 items-center mx-auto px-2 md:gap-6 m-20">
+        <div className="flex flex-col gap-6 items-center mx-auto p-7 md:gap-6 m-20">
           <div className="flex flex-col lg:pt-6 items-center gap-1 lg:gap-3">
             <h2 className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti">
               Pets for Adoption

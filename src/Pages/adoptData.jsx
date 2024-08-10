@@ -21,6 +21,7 @@ import {
 } from "../assets/Images";
 
 
+
 export const adoptData = [
   {
     id: "656429",

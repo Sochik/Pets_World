@@ -6,10 +6,7 @@ import { adoptData } from "./adoptData";
 import { IoMdPaw } from "react-icons/io";
 import { title_img } from "../assets/Images";
 
-export default function Home() {
-  // Step 1: Add state to manage the selected category
-  const [selectedCategory, setSelectedCategory] = useState("All"); // Default category is "All"
-
+export default function Home({ selectedCategory, setSelectedCategory }) {
   // Step 2: Filter the adoptData based on the selected category
   const filteredData =
     selectedCategory === "All"
@@ -72,7 +69,7 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto relative flex items-center  bg-white">
-        <div className="flex flex-col gap-6 items-center mx-auto md:gap-6 m-20">
+        <div className="flex flex-col gap-6 items-center mx-auto px-3 md:gap-6 m-20">
           <div className="flex flex-col items-center gap-1 lg:gap-3">
             <h2 className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti">
               Pets for Adoption

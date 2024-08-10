@@ -15,3 +15,6 @@ html,body{
 .shad{
     box-shadow: 0 0 15px -10px;
 }
+textarea{
+    resize: none;
+}
