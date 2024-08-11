@@ -6,7 +6,10 @@ import { adoptData } from "./adoptData";
 import { IoMdPaw } from "react-icons/io";
 import { title_img } from "../assets/Images";
 
-export default function Home({ selectedCategory, setSelectedCategory }) {
+export default function Home() {
+  // Step 1: Add state to manage the selected category
+  const [selectedCategory, setSelectedCategory] = useState("All"); // Default category is "All"
+
   // Step 2: Filter the adoptData based on the selected category
   const filteredData =
     selectedCategory === "All"
@@ -19,7 +22,7 @@ export default function Home({ selectedCategory, setSelectedCategory }) {
   return (
     <main className="min-h-full">
       <section className="container mx-auto relative flex items-center">
-        <aside className="h-full w-full">
+        <aside className="h-full mt-16 w-full">
           <Slider />
         </aside>
       </section>
@@ -54,7 +57,7 @@ export default function Home({ selectedCategory, setSelectedCategory }) {
                     <h4 className="text-lg font-bubblegum lg:text-2xl text-dark font-bold">
                       {aboutData.aboutHeader}
                     </h4>
-                    <p className="text-base lg:text-lg font-cabin text-primary">
+                    <p className="text-base font-cabin text-primary">
                       {aboutData.aboutNote}
                     </p>
                   </div>

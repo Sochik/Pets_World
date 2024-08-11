@@ -6,6 +6,7 @@ import Footer from "./Components/Footer";
 import { Toaster } from "react-hot-toast";
 import Gallery from "./Pages/Gallery";
 import Contact from "./Pages/Contact";
+import Personnels from "./Pages/Personnels";
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -44,6 +45,10 @@ export default function App() {
         {
           path: "/Contact",
           element: <Contact />,
+        },
+        {
+          path: "/Personnels",
+          element: <Personnels />,
         },
       ],
     },

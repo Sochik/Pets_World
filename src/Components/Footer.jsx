@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 export default function Footer({ selectedCategory, setSelectedCategory }) {
   return (
     <footer className="bg-secondary text-white text-sm md:text-lg lg:text-2xl pt-12">
-      <div className="container mx-auto py-4 flex flex-col md:flex-row flex-wrap gap-8 px-6 md:px-12 lg:px-20">
+      <div className="container mx-auto py-4 flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 px-6 md:px-12 lg:px-20">
         <aside className="flex flex-col w-full md:w-1/2 lg:w-1/4 items-center">
           <div className="flex items-center justify-center pb-6 gap-2">
             <IoMdPaw />
@@ -107,9 +107,10 @@ export default function Footer({ selectedCategory, setSelectedCategory }) {
         </Link>
       </div>
 
-      <small className="border-t bg-highlight py-5 opacity-50 text-xs text-center">
+      <small className=" py-5 opacity-50 text-xs text-center">
         &copy; {new Date().getFullYear()}. All rights reserved.
       </small>
     </footer>
   );
 }
+ 

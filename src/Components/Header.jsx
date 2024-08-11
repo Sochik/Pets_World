@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoMdPaw } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom"; // Import NavLink instead of Link
 import { logo, menu_strip } from "../assets/Images";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for Hamburger menu
 
@@ -25,43 +25,55 @@ export default function Header() {
         {/* Navigation Links */}
         <ul
           className={`${
-            menuOpen ? "block" : "hidden"
+            menuOpen ? " block" : "hidden"
           } md:flex flex-col md:flex-row md:gap-4 text-center font-semibold text-base absolute md:static top-16 right-0 bg-backdrop md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out`}
         >
-          <li className="p-2 md:p-0">
-            <Link
-              to={"/"}
-              className="md:text-lg flex gap-1 items-center hover:text-light"
+          <li className="p-2 md:p-0 ">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "md:text-lg flex gap-1 items-center text-light"
+                  : "md:text-lg flex gap-1 items-center hover:text-light"
+              }
               onClick={() => setMenuOpen(false)}
             >
               <IoMdPaw />
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="p-2 md:p-0">
-            <Link
-              to={"/About"}
-              className="md:text-lg flex gap-1 items-center hover:text-light"
+            <NavLink
+              to="/About"
+              className={({ isActive }) =>
+                isActive
+                  ? "md:text-lg flex gap-1 items-center text-light"
+                  : "md:text-lg flex gap-1 items-center hover:text-light"
+              }
               onClick={() => setMenuOpen(false)}
             >
               <IoMdPaw />
               About
-            </Link>
+            </NavLink>
           </li>
           <li className="p-2 md:p-0">
-            <Link
-              to={"/News"}
-              className="md:text-lg flex gap-1 items-center hover:text-light"
+            <NavLink
+              to="/News"
+              className={({ isActive }) =>
+                isActive
+                  ? "md:text-lg flex gap-1 items-center text-light"
+                  : "md:text-lg flex gap-1 items-center hover:text-light"
+              }
               onClick={() => setMenuOpen(false)}
             >
               <IoMdPaw />
               News
-            </Link>
+            </NavLink>
           </li>
         </ul>
         {/* Logo */}
-        <Link
-          to={"/"}
+        <NavLink
+          to="/"
           className=" cursor-pointer items-center flex justify-center mx-4"
         >
           <img
@@ -69,42 +81,54 @@ export default function Header() {
             alt="Pet_World"
             className="h-12 w-12 md:w-20 md:h-20 object-cover hover:rotate-3"
           />
-        </Link>
+        </NavLink>
         {/* right navLink */}
         <ul
           className={`${
-            menuOpen ? "block" : "hidden"
+            menuOpen ? "my-7 block" : "hidden"
           } md:flex flex-col md:flex-row md:gap-4 text-center font-semibold text-base absolute md:static top-16 right-0 bg-backdrop md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out`}
         >
           <li className="p-2 md:p-0">
-            <Link
-              to={"/Animals"}
-              className="md:text-lg flex gap-1 items-center hover:text-light"
+            <NavLink
+              to="/Personnels"
+              className={({ isActive }) =>
+                isActive
+                  ? "md:text-lg flex gap-1 items-center text-light"
+                  : "md:text-lg flex gap-1 items-center hover:text-light"
+              }
               onClick={() => setMenuOpen(false)}
             >
               <IoMdPaw />
-              Animals
-            </Link>
+              Personnels
+            </NavLink>
           </li>
-          <li className="p-2 md:p-0">
-            <Link
-              to={"/Gallery"}
-              className="md:text-lg flex gap-1 items-center hover:text-light"
+          <li className="p-2 md:p-0 ">
+            <NavLink
+              to="/Gallery"
+              className={({ isActive }) =>
+                isActive
+                  ? "md:text-lg flex gap-1 items-center text-light"
+                  : "md:text-lg flex gap-1 items-center hover:text-light"
+              }
               onClick={() => setMenuOpen(false)}
             >
               <IoMdPaw />
               Gallery
-            </Link>
+            </NavLink>
           </li>
           <li className="p-2 md:p-0">
-            <Link
-              to={"/Contact"}
-              className="md:text-lg flex gap-1 items-center hover:text-light"
+            <NavLink
+              to="/Contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "md:text-lg flex gap-1 items-center text-light"
+                  : "md:text-lg flex gap-1 items-center hover:text-light"
+              }
               onClick={() => setMenuOpen(false)}
             >
               <IoMdPaw />
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

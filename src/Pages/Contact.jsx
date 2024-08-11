@@ -1,11 +1,14 @@
 import React from "react";
 import { title_img, formBackground } from "../assets/Images";
+import { Link } from "react-router-dom";
+import { FaScissors, FaUserDoctor } from "react-icons/fa6";
+import { FaBabyCarriage, FaChalkboardTeacher } from "react-icons/fa";
 
 export default function Contact() {
   return (
     <main>
       <section className="container relative flex flex-col mx-auto lg:mx-0">
-        <div className="flex flex-col gap-6 items-center mx-auto p-7 md:gap-6 m-20">
+        <div className="flex flex-col gap-6 items-center mx-auto pt-14 p-7 md:gap-6 m-20">
           <div className="flex flex-col lg:pt-6 items-center gap-1 lg:gap-3">
             <h2 className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti">
               Contact Us!
@@ -70,6 +73,34 @@ export default function Contact() {
               </form>
             </div>
           </aside>
+          <div className="flex flex-col items-center py-5 font-bubblegum gap-10">
+            <h3 className=" font-extrabold text-2xl md:text-3xl text-secondary">
+              Whom do you Need?
+            </h3>
+            <div className="grid grid-cols-2 gap-3 md:flex md:flex-row item-center">
+              <Link className="bg-violet-400 hover:bg-violet-500 md:w-36 justify-center flex items-center gap-2 text-white text-center p-2 rounded-md">
+                <FaBabyCarriage />A Pet Sitter
+              </Link>
+              <Link className="bg-sky-400 hover:bg-sky-500 justify-center md:w-36 flex items-center gap-2 text-white text-center p-2 rounded-md">
+                <FaUserDoctor />A vet
+              </Link>
+              <Link className="bg-orange-400 hover:bg-orange-500 justify-center md:w-36 flex items-center gap-2 text-white text-center p-2 rounded-md">
+                <FaScissors />
+                Pet Groomer
+              </Link>
+              <Link className="bg-lime-400 hover:bg-lime-500 justify-center md:w-36 flex items-center gap-2 text-white text-center p-2 rounded-md">
+                <FaChalkboardTeacher />A Pet Trainer
+              </Link>
+            </div>
+            <div className="flex flex-col gap-5 pb-7">
+              <h5 className="text-secondary text-lg md:text-2xl font-bold">
+                If you need any help or have any queries
+              </h5>
+              <Link className="text-highlight font-semibold  md:text-xl mx-auto rounded-md py-3 md:p-5 bg-white hover:shadow-md">
+                Call us @ 2348149625268
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
