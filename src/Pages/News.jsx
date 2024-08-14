@@ -19,7 +19,7 @@ export default function News() {
         {newsData.map((news, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row gap-9 p-5  bg-orange-100 text-center rounded-lg group items-center w-full"
+            className="flex flex-col md:flex-row gap-9 p-5 shad  bg-orange-100 text-center rounded-lg group items-center w-full"
           >
             <img
               src={news.image}

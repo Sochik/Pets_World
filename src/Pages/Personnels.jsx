@@ -75,7 +75,7 @@ export default function Personnels() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-11/12 gap-4 md:gap-8">
             {filteredData.map(
               (
                 Personnel //To Override the slice when a Category is selected
