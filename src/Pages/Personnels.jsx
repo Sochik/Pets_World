@@ -145,7 +145,7 @@ export default function Personnels() {
                 {aside.map((aside) => (
                   <div className="p-5 mx-auto group items-center">
                     <div className="flex flex-col gap-4 p-5 mx-auto text-center rounded-lg items-center group-hover:bg-yellow-400 group-hover:bg-opacity-65">
-                      <h3 className="font-extrabold text-2xl md:text-3xl text-secondary">
+                      <h3 className=" text-2xl md:text-5xl text-secondary">
                         {aside.icon}
                       </h3>
                       <h2 className="font-extrabold text-xl md:text-2xl text-secondary">

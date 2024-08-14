@@ -10,7 +10,7 @@ export default function News() {
           Blog & Our News
         </h2>
         <p className="text-primary text-base md:text-2xl font-Caveat">
-          Get all the latest happenings around us
+          get all the latest happenings around us
         </p>
         <img src={title_img} alt="Title" />
       </div>
