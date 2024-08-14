@@ -60,7 +60,7 @@ export const adoptData = [
     Category: "Cat",
   },
   {
-    id: "656447",
+    id: "656457",
     name: "Moon",
     age: "3 Months",
     image: bird_3,
@@ -69,8 +69,8 @@ export const adoptData = [
     Category: "Bird",
   },
   {
-    id: "656445",
-    name: "Sky",
+    id: "656456",
+    name: "Andrea",
     age: "3 Months",
     image: bird_2,
     gender: "Female",
@@ -132,7 +132,7 @@ export const adoptData = [
     Category: "Dog",
   },
   {
-    id: "656437",
+    id: "656447",
     name: "Zee",
     age: "1.5 Years",
     image: dog_8,
@@ -195,8 +195,8 @@ export const adoptData = [
     Category: "Cat",
   },
   {
-    id: "656445",
-    name: "Sky",
+    id: "656446",
+    name: "Andrea",
     age: "2 Months",
     image: bird_4,
     gender: "Female",

@@ -13,14 +13,14 @@ export default function Slider() {
       id: 1,
       image: bg_slider1,
       title: (
-        <h2 className="absolute font-calligraffitti text-dark mx-auto top-[42%] left-[68%] md:bottom-[70%] flex flex-col  justify-center items-center leading-tight">
-          <span className="text-yellow-200 block font-extrabold text-2xl md:text-8xl">
+        <h2 className="absolute font-calligraffitti mx-auto top-[42%] left-[68%] md:bottom-[30%] flex flex-col  justify-center items-center leading-tight">
+          <span className="text-yellow-200 block font-extrabold text-2xl md:text-6xl">
             Save
           </span>
-          <span className="text-lime-400 block font-extrabold text-2xl md:text-8xl">
+          <span className="text-lime-400 block font-extrabold text-2xl md:text-6xl">
             Adopt
           </span>
-          <span className="text-highlight block font-extrabold text-2xl md:text-8xl">
+          <span className="text-highlight block font-extrabold text-2xl md:text-6xl">
             Donate
           </span>
         </h2>

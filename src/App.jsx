@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import Gallery from "./Pages/Gallery";
 import Contact from "./Pages/Contact";
 import Personnels from "./Pages/Personnels";
+import News from "./Pages/News";
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -45,6 +46,10 @@ export default function App() {
         {
           path: "/Contact",
           element: <Contact />,
+        },
+        {
+          path: "/News",
+          element: <News />,
         },
         {
           path: "/Personnels",
