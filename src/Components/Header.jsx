@@ -12,7 +12,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed font-cabin z-50 top-0 left-0 text-primary w-full bg-backdrop">
+    <header className="fixed font-cabin z-20 top-0 left-0 text-primary w-full bg-backdrop">
       <div className="container mx-auto flex justify-between lg:justify-center items-center relative p-4 md:px-8 gap-4 lg:gap-8">
         {/* Hamburger Menu Icon */}
         <button
@@ -26,7 +26,7 @@ export default function Header() {
         <ul
           className={`${
             menuOpen ? " block" : "hidden"
-          } md:flex flex-col md:flex-row md:gap-4 text-center font-semibold text-base absolute md:static top-16 right-0 bg-backdrop md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out`}
+          } md:flex flex-col md:flex-row md:gap-4 z-30 text-center font-semibold text-base absolute md:static top-16 right-0 bg-backdrop pt-3 md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out`}
         >
           <li className="p-2 md:p-0 ">
             <NavLink
@@ -70,24 +70,20 @@ export default function Header() {
               News
             </NavLink>
           </li>
-        </ul>
-        {/* Logo */}
-        <NavLink
-          to="/"
-          className=" cursor-pointer items-center flex justify-center mx-4"
-        >
-          <img
-            src={logo}
-            alt="Pet_World"
-            className="h-12 w-12 md:w-20 md:h-20 object-cover hover:rotate-3"
-          />
-        </NavLink>
-        {/* right navLink */}
-        <ul
-          className={`${
-            menuOpen ? "my-7 block" : "hidden"
-          } md:flex flex-col md:flex-row md:gap-4 text-center font-semibold text-base absolute md:static top-16 right-0 bg-backdrop md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out`}
-        >
+
+          {/* Logo */}
+          <NavLink
+            to="/"
+            className=" cursor-pointer items-center flex justify-center mx-4 "
+          >
+            <img
+              src={logo}
+              alt="Pet_World"
+              className="h-14 z-50 block absolute md:relative md:h-20 md:top-[50%] md:left-[50%] md:-translate-x-[50%] md:-translate-y-[80%] -top-14 right-7 w-14 md:w-20  object-cover hover:rotate-3"
+            />
+          </NavLink>
+          {/* right navLink */}
+
           <li className="p-2 md:p-0">
             <NavLink
               to="/Personnels"

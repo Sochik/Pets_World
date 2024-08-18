@@ -64,7 +64,7 @@ export default function Slider() {
 
   return (
     <div className="slider">
-      <div className="container">
+      <div className="">
         <Swiper
           className="mySwiper "
           modules={[Navigation, Pagination, Autoplay]}

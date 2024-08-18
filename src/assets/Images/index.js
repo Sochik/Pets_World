@@ -1,6 +1,7 @@
 import logo from "./Logo.png";
 import menu_strip from "./menu_strip.png";
 import BG_main from "./BG_main.jpg";
+import BG_img from "./BG_img.png";
 import bg_slider1 from "./bg_slider1.jpg";
 import bg_slider4 from "./bg_slider4.jpg";
 import bg_slider2 from "./bg_slider2.jpg";
@@ -55,11 +56,15 @@ import news4 from "./news4.jpg";
 import news5 from "./news5.jpg";
 import news6 from "./news6.jpg";
 import news7 from "./news7.jpg";
-
+import aboutimg1 from "./aboutimg1.jpg";
+import gridbg1 from "./gridbg1.png"
+  
 export {
+  aboutimg1,
   logo,
   menu_strip,
   BG_main,
+  BG_img,
   bg_slider1,
   bg_slider4,
   bg_slider2,
@@ -87,6 +92,7 @@ export {
   bird_2,
   bird_3,
   bird_4,
+  gridbg1,
   formBackground,
   petsitter1,
   petsitter2,

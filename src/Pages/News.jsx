@@ -4,7 +4,7 @@ import { title_img } from "../assets/Images";
 
 export default function News() {
   return (
-    <div className="flex flex-col gap-6 items-center pt-14 mx-auto md:gap-6 m-20 bg-white">
+    <div className="flex flex-col gap-6 items-center pt-14 mx-auto md:gap-6 m-20">
       <div className="flex flex-col lg:pt-6 items-center gap-1 lg:gap-3">
         <h2 className="text-highlight text-center font-extrabold text-2xl md:text-5xl font-calligraffitti">
           Blog & Our News
@@ -15,7 +15,7 @@ export default function News() {
         <img src={title_img} alt="Title" />
       </div>
 
-      <div className="flex flex-col flex-wrap justify-center gap-8 p-5 ">
+      <div className="container mx-auto w-11/12 flex flex-col flex-wrap justify-center gap-8 p-5 ">
         {newsData.map((news, index) => (
           <div
             key={index}

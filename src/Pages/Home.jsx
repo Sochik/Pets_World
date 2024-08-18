@@ -5,6 +5,7 @@ import { aboutData } from "./aboutData";
 import { adoptData } from "./adoptData";
 import { IoMdPaw } from "react-icons/io";
 import { title_img } from "../assets/Images";
+import GridSection from "../Components/GridSection";
 
 export default function Home() {
   // Step 1: Add state to manage the selected category
@@ -21,14 +22,14 @@ export default function Home() {
 
   return (
     <main className="min-h-full">
-      <section className="container mx-auto relative flex items-center">
-        <aside className="h-full mt-16 w-full">
+      <section className="mx-auto relative flex items-center">
+        <aside className="h-full mx-auto mt-16 lg:mt-16 w-full">
           <Slider />
         </aside>
       </section>
 
-      <section className="container mx-auto relative flex items-center mb-4">
-        <div className="flex flex-col gap-6 items-center mx-auto md:gap-6 my-3">
+      <section className="mx-auto relative flex items-center mb-4">
+        <div className="container flex flex-col gap-6 items-center w-11/12 mx-auto md:gap-6 my-3">
           <div className="flex flex-col items-center gap-1 lg:gap-3 lg:py-3">
             <h2 className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti">
               Services we Provide
@@ -71,8 +72,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto relative flex items-center  bg-white">
-        <div className="flex flex-col gap-6 items-center mx-auto px-3 md:gap-6 m-20">
+      <section className="relative flex items-center bg-white">
+        <div className="container flex flex-col gap-6 pb-20 items-center w-11/12 mx-auto md:gap-6 mt-20">
           <div className="flex flex-col items-center gap-1 lg:gap-3">
             <h2 className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti">
               Pets for Adoption
@@ -174,6 +175,20 @@ export default function Home() {
               )
             )}
           </div>
+        </div>
+      </section>
+      <section className="container mx-auto relative flex flex-col pt-10 items-center">
+        <div className="flex flex-col items-center gap-1 lg:gap-3">
+          <h2 className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti">
+            Our Blog
+          </h2>
+          <p className="text-primary text-base md:text-2xl font-Caveat">
+            get into your pets world
+          </p>
+          <img src={title_img} alt="" />
+        </div>
+        <div className="mx-auto w-10/12 pb-20">
+          <GridSection />
         </div>
       </section>
     </main>

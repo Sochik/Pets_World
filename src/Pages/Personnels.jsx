@@ -106,9 +106,12 @@ export default function Personnels() {
                     <h6 className="text-secondary lg:px-2">
                       Exp: <span className="font-normal">{Personnel.exp}</span>
                     </h6>
-                    <button className="cursor-pointer py-2 px-3 rounded-full bg-primary text-white my-2 text-base lg:text-lg font-bold hover:bg-highlight">
+                    <Link
+                      to=""
+                      className="cursor-pointer py-2 px-3 rounded-full bg-primary text-white my-2 text-base lg:text-lg font-bold hover:bg-highlight"
+                    >
                       Hire
-                    </button>
+                    </Link>
                   </div>
                 </aside>
               )
@@ -118,8 +121,8 @@ export default function Personnels() {
             <h3 className=" font-extrabold text-2xl md:text-3xl text-secondary">
               Love animals? Earn upto $20/hr.
             </h3>
-            <div className="grid grid-cols-2 gap-3 md:flex md:flex-row item-center">
-              <p className="text-primary text-base md:text-2xl font-Caveat">
+            <div className=" gap-3 md:flex md:flex-row item-center">
+              <p className="text-primary text-center mx-auto text-base md:text-2xl font-Caveat">
                 Join 1000+ pet sitters - Nationwide
               </p>
             </div>
@@ -143,7 +146,10 @@ export default function Personnels() {
               </h2>
               <div className="grid grid-col-2 md:flex w-10/12 font-bubblegum gap-2 py-10 items-center mx-auto">
                 {aside.map((aside) => (
-                  <div className="p-5 mx-auto group items-center">
+                  <div
+                    key={aside.id}
+                    className="p-5 mx-auto group items-center"
+                  >
                     <div className="flex flex-col gap-4 p-5 mx-auto text-center rounded-lg items-center group-hover:bg-yellow-400 group-hover:bg-opacity-65">
                       <h3 className=" text-2xl md:text-5xl text-secondary">
                         {aside.icon}
