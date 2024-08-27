@@ -55,7 +55,7 @@ export const Grid_layout = [
     title: (
       <Link
         to="/Personnels"
-        className="col-span-1 row-span-1 items-start font-calligraffitti text-center w-full h-full text-white flex gap-2 bg-dark bg-opacity-70 hover:bg-opacity-90 rounded-lg"
+        className="col-span-1 row-span-1 items-start font-calligraffitti text-center w-full h-full text-white flex gap-2 bg-dark bg-opacity-70 hover:bg-opacity-80 rounded-lg"
         style={{
           backgroundImage: ``,
           backgroundSize: "cover",

@@ -9,7 +9,7 @@ import Contact from "./Pages/Contact";
 import Personnels from "./Pages/Personnels";
 import News from "./Pages/News";
 import About from "./Pages/About";
-import Hire from "./Pages/Hire";
+
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -62,8 +62,7 @@ export default function App() {
           element: <Personnels />,
         },
         {
-          path: "/Hire",
-          element:<Hire />
+          path: "/Hire"
         }
       ],
     },

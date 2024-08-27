@@ -37,9 +37,12 @@ export default function Slider() {
           <p className="block text-white leading-5 pb-1 md:text-3xl">
             We got trained professionals for hire here
           </p>
-          <button className="text-white md:text-3xl rounded py-1 px-1 md:p-3 bg-orange-400 hover:bg-white hover:text-orange-400">
+          <Link
+            to="/Personnels"
+            className="text-white md:text-3xl rounded py-1 px-1 md:p-3 bg-orange-400 hover:bg-white hover:text-orange-400"
+          >
             Click Here
-          </button>
+          </Link>
         </div>
       ),
     },
@@ -54,9 +57,12 @@ export default function Slider() {
           <p className="block text-xl leading-5 pb-3 md:text-3xl">
             Lots of pets need your attention
           </p>
-          <button className="text-white text-xl md:text-3xl rounded py-1 px-2 md:p-3 bg-lime-400 hover:bg-white hover:text-lime-400">
+          <Link
+            to="/Gallery"
+            className="text-white text-xl md:text-3xl rounded py-1 px-2 md:p-3 bg-lime-400 hover:bg-white hover:text-lime-400"
+          >
             Adopt
-          </button>
+          </Link>
         </div>
       ),
     },
