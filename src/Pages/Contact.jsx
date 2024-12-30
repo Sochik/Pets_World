@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { title_img, formBackground } from "../assets/Images";
 import { Link } from "react-router-dom";
 import { FaScissors, FaUserDoctor } from "react-icons/fa6";
 import { FaBabyCarriage, FaChalkboardTeacher } from "react-icons/fa";
 
 export default function Contact() {
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
   return (
     <main>
       <section className="container relative flex flex-col mx-auto lg:mx-0">
@@ -24,8 +29,7 @@ export default function Contact() {
             <div className="w-full rounded-lg lg:rounded-none pb-5 px-2 lg:px-0">
               <iframe
                 className="object-cover  w-full h-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.2617420461456!2d7.391532174618711!3d9.220869790848331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104ddc34ceaba157%3A0xc491bc197c4a3588!2sThe%20British%20Oasis%20Academy%2C%20Abuja.!5e0!3m2!1sen!2sng!4v1723310465010!5m2!1sen!2sng"
-                allowfullscreen=""
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3938.2486880839847!2d7.390709074783087!3d9.2220395908472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMTMnMTkuMyJOIDfCsDIzJzM1LjgiRQ!5e0!3m2!1sen!2sng!4v1735495517501!5m2!1sen!2sng"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 title="Google Maps"

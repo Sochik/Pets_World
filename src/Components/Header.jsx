@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdPaw } from "react-icons/io";
 import { NavLink } from "react-router-dom"; // Import NavLink instead of Link
 import { logo, menu_strip } from "../assets/Images";
@@ -10,7 +10,6 @@ export default function Header() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
   return (
     <header className="fixed font-cabin z-20 top-0 left-0 text-primary w-full bg-backdrop">
       <div className="container mx-auto flex justify-between lg:justify-center items-center relative p-4 md:px-8 gap-4 lg:gap-8">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
     aboutimg1,
  BG_img, title_img
@@ -6,6 +6,11 @@ import {
 import { IoMdPaw } from "react-icons/io";
 
 export default function About() {
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
   return (
     <div className="flex flex-col gap-10 items-center pt-14 mx-auto md:gap-14 m-20">
       

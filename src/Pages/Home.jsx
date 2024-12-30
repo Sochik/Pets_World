@@ -4,10 +4,14 @@ import Slider from "../Components/Slider";
 import { aboutData } from "./aboutData";
 import { adoptData } from "./adoptData";
 import { IoMdPaw } from "react-icons/io";
-import { title_img } from "../assets/Images";
+import { home_bg, title_img } from "../assets/Images";
 import GridSection from "../Components/GridSection";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { experienceData } from "./experienceData";
+import CountUp from "react-countup";
+import { InView, useInView } from "react-intersection-observer";
+
 
 export default function Home() {
   // Step 1: Add state to manage the selected category
@@ -26,6 +30,11 @@ export default function Home() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+  // useEffect(() => {
+  //   return () => {
+  //     window.scrollTo(0, 0);
+  //   };
+  // }, []);
 
   return (
     <main className="min-h-full">
@@ -204,6 +213,76 @@ export default function Home() {
         </div>
         <div className="mx-auto w-10/12 pb-20">
           <GridSection />
+        </div>
+      </section>
+
+      <section
+        className="flex flex-col items-center gap-6 h-full lg:gap-3"
+        style={{
+          backgroundImage: `url(${home_bg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container mx-auto relative flex flex-col py-16 items-center bg-red-700 bg-opacity-75">
+          <div className="flex flex-col items-center gap-1 lg:gap-3">
+            <h2
+              className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti"
+              data-aos="fade-down"
+            >
+              Experience & Records
+            </h2>
+            <p className="text-slate-300 text-base md:text-2xl font-Caveat">
+              we've fetched some numbers for you..
+            </p>
+            <img src={title_img} alt="" />
+          </div>
+          <div className="flex flex-col lg:flex-row gap-4 w-11/12 my-8">
+            {experienceData.map((data) => {
+              // Extract numeric part and non-numeric prefix/suffix
+              const numericValue = parseFloat(
+                data.experienceNumber.toString().replace(/[^0-9.]/g, "")
+              );
+              const prefix = data.experienceNumber.startsWith("$") ? "$" : "";
+              const suffix = data.experienceNumber
+                .replace(/[0-9.$]/g, "")
+                .trim();
+
+              return (
+                <aside
+                  key={data.id}
+                  className="flex lg:flex-col mx-auto py-5 items-center md:w-3/12 justify-center rounded-lg relative"
+                  data-aos="fade-up"
+                >
+                  <div className="flex-col px-2 items-center text-center">
+                    <div className="flex flex-col gap-2 flex-1 mb-5">
+                      <h4 className="text-4xl font-bubblegum lg:text-5xl text-light font-bold">
+                        <span>
+                          {prefix}
+                          <CountUp
+                            start={0}
+                            end={numericValue}
+                            duration={3}
+                            separator=","
+                          />
+                          {suffix && ` ${suffix}`}
+                        </span>
+                      </h4>
+                      <p className="text-3xl font-bubblegum text-white">
+                        {data.desc}
+                      </p>
+                    </div>
+                    <Link
+                      to="/Personnels"
+                      className="text-white font-bubblegum text-lg lg:text-xl rounded p-2 bg-light hover:bg-white hover:text-light"
+                    >
+                      {data.cta}
+                    </Link>
+                  </div>
+                </aside>
+              );
+            })}
+          </div>
         </div>
       </section>
     </main>

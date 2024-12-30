@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { aside, personnelsData } from "./personnelsData";
 import { BG_main, title_img } from "../assets/Images";
 import { Link } from "react-router-dom";
@@ -15,7 +15,12 @@ export default function Personnels() {
       : personnelsData.filter(
           (Personnel) =>
             Personnel.Category.toLowerCase() === selectedCategory.toLowerCase()
-        );
+      );
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
   return (
     <main>
       <section className="container mx-auto relative flex items-center">

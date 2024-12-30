@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { adoptData } from "./adoptData";
 import { title_img } from "../assets/Images";
@@ -14,7 +14,13 @@ export default function Gallery() {
       : adoptData.filter(
           (adopt) =>
             adopt.Category.toLowerCase() === selectedCategory.toLowerCase()
-        );
+      );
+  
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
   return (
     <main>
       <section className="container mx-auto relative flex items-center">

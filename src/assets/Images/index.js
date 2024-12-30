@@ -57,13 +57,15 @@ import news5 from "./news5.jpg";
 import news6 from "./news6.jpg";
 import news7 from "./news7.jpg";
 import aboutimg1 from "./aboutimg1.jpg";
-import gridbg1 from "./gridbg1.png"
+import gridbg1 from "./gridbg1.png";
+import home_bg from "./home_bg.jpg";
   
 export {
   aboutimg1,
   logo,
   menu_strip,
   BG_main,
+  home_bg,
   BG_img,
   bg_slider1,
   bg_slider4,
