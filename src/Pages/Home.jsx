@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Slider from "../Components/Slider";
 import { aboutData } from "./aboutData";
 import { adoptData } from "./adoptData";
+import SectionHeader from "../Components/SectionHeader";
 import { IoMdPaw } from "react-icons/io";
 import { home_bg, title_img } from "../assets/Images";
 import GridSection from "../Components/GridSection";
