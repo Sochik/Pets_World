@@ -202,7 +202,7 @@ export default function Home() {
       >
         <div className="container mx-auto relative flex flex-col py-16 items-center bg-red-700 bg-opacity-75">
           <SectionHeader
-            title="Our Experience"
+            title="Experience & Records"
             desc="we've fetched some numbers for you..."
           />
           <div className="flex flex-col lg:flex-row gap-4 w-11/12 my-8">
