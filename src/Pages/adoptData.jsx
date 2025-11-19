@@ -47,8 +47,8 @@ export const adoptData = [
     age: "8 Months",
     image: dog_3,
     gender: "Female",
-    breed: "Maine Coon",
-    Category: "Cat",
+    breed: "Cane Corso",
+    Category: "Dog",
   },
   {
     id: "656443",
