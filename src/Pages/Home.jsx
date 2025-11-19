@@ -46,18 +46,10 @@ export default function Home() {
 
       <section className="mx-auto relative flex items-center mb-4">
         <div className="container flex flex-col gap-6 items-center w-11/12 mx-auto md:gap-6 my-3">
-          <div className="flex flex-col items-center gap-1 lg:gap-3 lg:py-3">
-            <h2
-              className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti"
-              data-aos="fade-down"
-            >
-              Services we Provide
-            </h2>
-            <p className="text-primary text-base md:text-2xl font-Caveat">
-              we fulfill your needs
-            </p>
-            <img src={title_img} alt="" />
-          </div>
+          <SectionHeader
+            title="Services we Provide"
+            desc="we fulfill your needs"
+          />
           <div className="flex flex-col lg:flex-row gap-8">
             {aboutData.map((aboutData) => (
               <aside
@@ -94,18 +86,10 @@ export default function Home() {
 
       <section className="relative flex items-center bg-white">
         <div className="container flex flex-col gap-6 pb-20 items-center w-11/12 mx-auto md:gap-6 mt-20">
-          <div className="flex flex-col items-center gap-1 lg:gap-3">
-            <h2
-              className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti"
-              data-aos="fade-down"
-            >
-              Pets for Adoption
-            </h2>
-            <p className="text-primary text-base md:text-2xl font-Caveat">
-              you are in the right place
-            </p>
-            <img src={title_img} alt="" />
-          </div>
+          <SectionHeader
+            title="Pets for Adoption"
+            desc="find your new best friend"
+          />
 
           <div className="flex font-bubblegum gap-1 md:gap-9 items-center mx-auto py-2 lg:pb-8 font-bold text-dark">
             <Link
@@ -199,18 +183,10 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto relative flex flex-col pt-10 items-center">
-        <div className="flex flex-col items-center gap-1 lg:gap-3">
-          <h2
-            className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti"
-            data-aos="fade-down"
-          >
-            Our Blog
-          </h2>
-          <p className="text-primary text-base md:text-2xl font-Caveat">
-            get into your pets world
-          </p>
-          <img src={title_img} alt="" />
-        </div>
+        <SectionHeader
+          title="Our Blog"
+          desc="get into pets world"
+        />
         <div className="mx-auto w-10/12 pb-20">
           <GridSection />
         </div>
@@ -225,18 +201,10 @@ export default function Home() {
         }}
       >
         <div className="container mx-auto relative flex flex-col py-16 items-center bg-red-700 bg-opacity-75">
-          <div className="flex flex-col items-center gap-1 lg:gap-3">
-            <h2
-              className="text-highlight font-extrabold text-2xl md:text-5xl font-calligraffitti"
-              data-aos="fade-down"
-            >
-              Experience & Records
-            </h2>
-            <p className="text-slate-300 text-base md:text-2xl font-Caveat">
-              we've fetched some numbers for you..
-            </p>
-            <img src={title_img} alt="" />
-          </div>
+          <SectionHeader
+            title="Our Experience"
+            desc="we've fetched some numbers for you..."
+          />
           <div className="flex flex-col lg:flex-row gap-4 w-11/12 my-8">
             {experienceData.map((data) => {
               // Extract numeric part and non-numeric prefix/suffix
